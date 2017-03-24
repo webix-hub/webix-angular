@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="webixApp">
+<head>
+  <meta charset="utf-8">
+  <title>Webix - Angular  : Visibility</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.webix.com/edge/webix.css">
+  <script type="text/javascript" src="//cdn.webix.com/edge/webix.js"></script>
+  <script type="text/javascript" src="../sources/index.js"></script>
+
+  <script type="text/javascript" src="js/dataApp.js"></script>
+</head>
+<body ng-controller="webixTestController">
+
+<div webix-ui type="wide">
+  <div height="35">Header</div>
+  <div view="cols" type="wide">
+    <div width="200" webix-show="showLeft">Left</div>
+    <div>Center view</div>
+    <div width="200" webix-show="showRight">Right</div>    
+  </div>
+  <div height="135">
+    <button ng-click="showLeft=true">Show Left</button>
+    <button ng-click="showRight=true">Show Right</button>
+    <br>
+    <button ng-click="showLeft=false">Hide Left</button>
+    <button ng-click="showRight=false">Hide Right</button>
+  </div>
+</div>
+
+</body>
+</html>

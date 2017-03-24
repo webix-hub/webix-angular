@@ -1,0 +1,24 @@
+{
+  "name": "webix-angular",
+  "version": "1.0.0",
+  "description": "AngularJS adapter for Webix UI",
+  "main": "sources/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webix-hub/webix-angular.git"
+  },
+  "keywords": [
+    "webix",
+    "ui",
+    "angular"
+  ],
+  "author": "Maksim Kozhukh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webix-hub/webix-angular/issues"
+  },
+  "homepage": "https://github.com/webix-hub/webix-angular#readme"
+}
