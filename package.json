@@ -1,6 +1,6 @@
 {
   "name": "webix-angular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AngularJS adapter for Webix UI",
   "main": "sources/index.js",
   "scripts": {
