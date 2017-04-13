@@ -42,7 +42,13 @@ angular.module("webix", [])
 
           //destruct components
           $element.bind('$destroy', function() {
-            if(wxRoot) wxRoot.destructor();
+            if (wxRoot && !wxRoot.$destructed && wxRoot.destructor)
+              wxRoot.destructor();
+          });
+          //ensure that ui is destroyed on scope destruction
+          $scope.$on('$destroy', function(){
+            if (wxRoot && !wxRoot.$destructed && wxRoot.destructor)
+              wxRoot.destructor();
           });
 
           //webix-ui attribute has some value - will try to use it as configuration
