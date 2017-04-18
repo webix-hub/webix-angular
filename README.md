@@ -69,11 +69,11 @@ This method resembles Webix [HTML Initialization technique](http://docs.webix.co
 
 - Webix application lies in a div block with **webix-ui** directive:
 	- **view** attribute of such block specifies Webix component you want to init;
-    - if you don't specify the view attribute - a layout row will be created;
+	- if you don't specify the view attribute - a layout row will be created;
 - all div blocks within "webix-ui block" are Webix views (components):
 	- **view** attribute of a div specifies Webix component you want to init;
-    - a div block without the view attribute inits Webix template;
-    - other attributes of div blocks are component **properties**;
+	- a div block without the view attribute inits Webix template;
+	- other attributes of div blocks are component **properties**;
 - As with standard Angular JS, you can easily insert Angular directives into tags including inputs and buttons (like in standard HTML).
 
 **Layout with Tabbar and Multiview**
