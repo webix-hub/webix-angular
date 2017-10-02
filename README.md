@@ -1,11 +1,13 @@
-Angular adapter for Webix UI
+Angular JS adapter for Webix UI
 ==========================
 
 [![npm version](https://badge.fury.io/js/webix-angular.svg)](https://badge.fury.io/js/webix-angular)
 
 Before Webix 4.3 this module was part of webix.js
 
-See the detailed documentation on [integration of Webix with Angular](http://docs.webix.com/desktop__angular.html).
+See the detailed documentation on [integration of Webix with Angular JS](http://docs.webix.com/desktop__angular.html).
+
+If you are looking for the demo for **Angular 2 and above**, check the [related repository](https://github.com/webix-hub/angular2-demo).
 
 Webix-Angular App Structure
 ---------------------------
