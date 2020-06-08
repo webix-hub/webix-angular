@@ -56,8 +56,9 @@ angular.module("webix", [])
             //configuration
             var watcher = function(data){
               if (wxRoot) wxRoot.destructor();
-              if ($scope[dataname]){
-                var config = webix.copy($scope[dataname]);
+              const scopeConfig = recursiveDotAccess($scope, dataname);
+              if (scopeConfig){
+                var config = webix.copy(scopeConfig);
                 config.$scope =$scope;
                 $element[0].innerHTML = "";
                 wxRoot = webix.ui(config, $element[0]);
@@ -226,6 +227,35 @@ angular.module("webix", [])
     } else {
       webix.delay(loadData, this, [$element, id, collection], 100, num+1);
     }
+  }
+  
+  // Get dotted name from object via bracket notation.
+  function recursiveDotAccess(obj, possiblyDottedName) {
+    
+    if (
+        // If it's an empty string
+        !possiblyDottedName ||
+
+        // Or not a string
+        (typeof possiblyDottedName !== 'string' && !(possiblyDottedName instanceof String)) ||
+
+        // Or not an object
+        typeof obj !== 'object' ||
+
+        // Or null
+        obj === null
+    ) {
+
+      // Then return here
+      return obj;
+
+    }
+
+    // At this point, we have a non-empty string and a non-null object
+    let names = possiblyDottedName.split('.');
+    const name = names.shift();
+    return recursiveDotAccess(obj[name], names.join('.'));
+
   }
 
 })();
