@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="webixApp">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Webix - Angular  : Events</title>
+  <title>Webix - Angular  : Complex Init</title>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="//cdn.webix.com/edge/webix.css">
   <script type="text/javascript" src="//cdn.webix.com/edge/webix.js"></script>
   <script type="text/javascript" src="../sources/index.js"></script>
 
-  <script type="text/javascript" src="js/eventsApp.js"></script>
-  <style type="text/css">
-    .rating {
-      text-align: center;
-    }
-  </style>
+  <script type="text/javascript" src="js/complexApp.js"></script>
+  <style> html, body { height:100%; } </style>
 </head>
-<body ng-controller="webixEventsController">
+<body class="webix_full_screen">
 
-  <h3>Select row in the grid</h3>
-  <div webix-ui="config" webix-ready="updateInfo(root)"></div>
+  <div ng-app="webixApp" ng-controller="webixCtrl" style="height:100%; width:100%">
+  <div webix-ui="config" webix-ready="doSome(root)" style="height:100%; width:100%;">
 
+</div>
 </body>
 </html>

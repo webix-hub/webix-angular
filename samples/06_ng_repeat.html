@@ -2,24 +2,27 @@
 <html lang="en" ng-app="webixApp">
 <head>
   <meta charset="utf-8">
-  <title>Webix - Angular  : Events</title>
+  <title>Webix - Angular : Using ng-repeat</title>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="//cdn.webix.com/edge/webix.css">
   <script type="text/javascript" src="//cdn.webix.com/edge/webix.js"></script>
   <script type="text/javascript" src="../sources/index.js"></script>
 
-  <script type="text/javascript" src="js/eventsApp.js"></script>
+  <script type="text/javascript" src="js/repeatApp.js"></script>
   <style type="text/css">
-    .rating {
-      text-align: center;
-    }
+    html, body { height:100%; padding:0px; margin:0px; }
   </style>
 </head>
-<body ng-controller="webixEventsController">
+<body ng-controller="webixChartController">
 
-  <h3>Select row in the grid</h3>
-  <div webix-ui="config" webix-ready="updateInfo(root)"></div>
+  <div
+    ng-repeat="chart in charts"
+    webix-ui="chart.config"
+    webix-data="chart.data"
+    webix-watch="false"
+    style="width:100%; height:calc(100% / 3);">
+  </div>
 
 </body>
 </html>
