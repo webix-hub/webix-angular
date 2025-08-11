@@ -1,38 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="webixApp">
 <head>
   <meta charset="utf-8">
   <title>Webix - Angular  : Layouts</title>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="//cdn.webix.com/edge/webix.css">
   <script type="text/javascript" src="//cdn.webix.com/edge/webix.js"></script>
   <script type="text/javascript" src="../sources/index.js"></script>
 
-  <script type="text/javascript">
-  	var app = angular.module('webixApp', [ "webix" ]);
-  </script>
+  <script type="text/javascript" src="js/layoutApp.js"></script>
+  <style> html, body { height:100%; padding:0px; margin:0px; } </style>
 </head>
-<body>
+<body ng-controller="webixLayoutController" class="webix_full_screen">
 
-<div webix-ui type="space">
-	<div height="35">Header {{app}}</div>
-	<div view="cols" type="wide" margin="10">
-		<div width="200">
-			<input type="text" placeholder="Type something here" ng-model="app">
-		</div>
-		<div view="resizer"></div>
-		<div view="tabview">
-			<div header="Tab1">
-				1. Some content here
-			</div>
-			<div header="Tab2">
-				2. Other content here
-			</div>
-		</div>
-	</div>
-	<div height="35">Footer</div>
-</div>
+  <div webix-ui="config" webix-ready="updateHeaderText(root)" style="width:100%; height:100%;"></div>
 
 </body>
 </html>
